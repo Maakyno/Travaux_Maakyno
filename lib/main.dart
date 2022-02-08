@@ -5,12 +5,31 @@ void main() {
     MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Center(child: Text("Maakyno")),
+          title: Center(child: Text("Bienvenue chez Maakyno")),
+
+          backgroundColor: Color(0xffA52A2A),
         ),
         body: Center(
-          child: Image(
-            image: AssetImage("images/teddy.png"),
+          child: Row(
+            children: [
+              Image(
+                image: AssetImage("images/teddy.png"),
+                height: 500,
+                width: 500,
+              ),
+              Image(
+                image: AssetImage("images/teddy.png"),
+                height: 500,
+                width: 500,
+              ),
+              Image(
+                image: AssetImage("images/teddy.png"),
+                height: 500,
+                width: 500,
+              ),
+            ],
           ),
+
         ),
       ),
     )
