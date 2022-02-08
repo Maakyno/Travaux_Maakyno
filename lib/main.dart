@@ -1,6 +1,19 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Center(child: Text("Maakyno")),
+        ),
+        body: Center(
+          child: Image(
+            image: AssetImage("images/teddy.png"),
+          ),
+        ),
+      ),
+    )
+  );
 }
 
