@@ -3,36 +3,51 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(
     MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Center(child: Text("Bienvenue chez Maakyno")),
-
-          backgroundColor: Color(0xffA52A2A),
-        ),
-        body: Center(
-          child: Row(
-            children: [
-              Image(
-                image: AssetImage("images/teddy.png"),
-                height: 500,
-                width: 500,
-              ),
-              Image(
-                image: AssetImage("images/teddy.png"),
-                height: 500,
-                width: 500,
-              ),
-              Image(
-                image: AssetImage("images/teddy.png"),
-                height: 500,
-                width: 500,
-              ),
-            ],
-          ),
-
-        ),
-      ),
-    )
+      home: MyApp(),
+    ),
   );
 }
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.teal,
+      body: SafeArea(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+              width: 100,
+              color: Colors.red,
+            ),
+            Column (
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.yellow,
+                ),
+                Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.green,
+                ),
+              ],
+            ),
+
+            Container(
+              width: 100,
+              color: Colors.blue,
+            ),
+          ],
+        ),
+
+      ),
+    );
+  }
+}
+
+
 
